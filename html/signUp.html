@@ -9,52 +9,54 @@
 </head>
 
 <body>
-    <input type="text" placeholder="이름" autofocus><br><br>
-    <input type="text" placeholder="아이디"><br><br>
-    <input type="password" placeholder="비밀번호"><br><br>
-    <input type="password" placeholder="비밀번호 재입력"><br><br>
-    <select name="regionalNum" id="regNum" style="background-color: gainsboro;">
-        <option value="" selected disabled hidden>전화번호</option>
-        <option value="1">02</option>
-        <option value="2">031</option>
-        <option value="3">032</option>
-        <option value="4">051</option>
-        <option value="5">052</option>
-        <option value="6">061</option>
-        <option value="7">062</option>
-    </select>
-    -
-    <input type="number" name="firstPhone" id="fp" style="background-color: gainsboro;">
-    -
-    <input type="number" name="secondPhone" id="sp" style="background-color: gainsboro;"><br><br>
-    <select name="cellHead" id="ch" style="background-color: gainsboro;">
-        <option value="" selected disabled hidden>휴대폰 번호</option>
-        <option value="1">010</option>
-        <option value="2">011</option>
-        <option value="3">019</option>
-    </select>
-    -
-    <input type="number" name="firstCell" id="fc" style="background-color: gainsboro;">
-    -
-    <input type="number" name="secondCell" id="sc" style="background-color: gainsboro;">
-    <input type="button" value="휴대폰 인증">
-    <br><br>
-    <input type="radio" name="radSel" id="r1">
-    <label for="r1">인증받은 휴대폰 번호를 대표번호로 사용 </label>
-    <input type="radio" name="radSel" id="r2">
-    <label for="r2">다른 번호 등록 </label>
-    <input type="radio" name="radSel" id="r3">
-    <label for="r3">다음에 등록함 </label>
+    <form action="">
+        <input type="text" placeholder="이름" autofocus><br><br>
+        <input type="text" placeholder="아이디"><br><br>
+        <input type="password" placeholder="비밀번호"><br><br>
+        <input type="password" placeholder="비밀번호 재입력"><br><br>
+        <select name="regionalNum" id="regNum" style="background-color: gainsboro;">
+            <option value="" selected disabled hidden>전화번호</option>
+            <option value="1">02</option>
+            <option value="2">031</option>
+            <option value="3">032</option>
+            <option value="4">051</option>
+            <option value="5">052</option>
+            <option value="6">061</option>
+            <option value="7">062</option>
+        </select>
+        -
+        <input type="number" name="firstPhone" id="fp" style="background-color: gainsboro;">
+        -
+        <input type="number" name="secondPhone" id="sp" style="background-color: gainsboro;"><br><br>
+        <select name="cellHead" id="ch" style="background-color: gainsboro;">
+            <option value="" selected disabled>휴대폰 번호</option>
+            <option value="1">010</option>
+            <option value="2">011</option>
+            <option value="3">019</option>
+        </select>
+        -
+        <input type="number" name="firstCell" id="fc" style="background-color: gainsboro;">
+        -
+        <input type="number" name="secondCell" id="sc" style="background-color: gainsboro;">
+        <input type="button" value="휴대폰 인증">
+        <br><br>
+        <input type="radio" name="radSel" id="r1">
+        <label for="r1">인증받은 휴대폰 번호를 대표번호로 사용 </label>
+        <input type="radio" name="radSel" id="r2">
+        <label for="r2">다른 번호 등록 </label>
+        <input type="radio" name="radSel" id="r3">
+        <label for="r3">다음에 등록함 </label>
 
-    <br><br>
+        <br><br>
 
-    <input type="text" placeholder="우편번호" style="background-color: gainsboro;">
-    <input type="button" value="주소찾기">
-    <br><br>
+        <input type="text" placeholder="우편번호" style="background-color: gainsboro;">
+        <input type="button" value="주소찾기">
+        <br><br>
 
-    <input type="submit" value="가입신청"
-        style="background-color:red; color:white; width: 200px; height: 50px; font-size: 20px;">
-    <input type="button" value="취 소" style="width:200px; height: 50px; font-size: 20px;">
+        <input type="submit" value="가입신청"
+            style="background-color:red; color:white; width: 200px; height: 50px; font-size: 20px;">
+        <input type="button" value="취 소" style="width:200px; height: 50px; font-size: 20px;">
+    </form>
 </body>
 
 </html>
