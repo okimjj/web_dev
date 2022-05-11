@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div {
+            /* div는 원래 block 속성이지만 display 속성을 바꿔 inline으로 만들 수 있다. */
+            /* inline-block을 사용하면 좀 더 자유롭게 변형이 가능하다. */
+            display: inline-block;
+            height: 100px;
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        span {
+            /* inline인 span도 block으로 바꿀 수 있음 */
+            display: block;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- div는 block display 속성. 행 전체를 혼자 차지한다. -->
+    <div>div</div>
+    <div>div</div>
+    <!-- span은 inline display 속성. 같은 행에서 디스플레이가 이어진다. -->
+    <span>span</span>
+    <span>span</span>
+    <!-- h1 = block display -->
+    <h1>h1</h1>
+    <h1>h1</h1>
+    <!-- header and footer = block display -->
+    <header>header</header>
+    <footer>footer</footer>
+</body>
+
+</html>
