@@ -10,9 +10,13 @@
 
 <body>
     <script>
-        let input = prompt('숫자를 입력해주세요');
+        let input = Number(prompt('숫자를 입력해주세요'));
 
         let converted = parseInt(input);
+
+        if (isNaN(input)) {
+            alert('숫자를 입력해주세요');
+        }
 
         if (converted < 1 || converted > 100) {
             alert('1 이상, 100 이하를 넣어주세요');
@@ -22,9 +26,9 @@
                 console.log(i);
             }
             alert('완료되었습니다.');
-        } else {
-            alert("숫자를 입력해주세요");
-        }
+        } //else {
+            //alert("숫자를 입력해주세요");
+        //}
 
     </script>
 </body>
