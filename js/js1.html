@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./myScript.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 10;
+        var name = "김정재";
+
+        const STUDENT_COUNT = 10;
+        let j = 10;
+
+        //자바 스타일 문자열 병합
+        var result = name + "은 " + i + " 살입니다";
+        //나중에 추가된 문자열 병합
+        result = `${name}은 ${i} 살입니다`;
+
+        function myAlert() {
+            console.log("경고했다");
+        }
+    </script>
+
+    <input type="button" value="버튼" onclick="javascript:alert('경고')">
+    <button onclick="alert('경고')">버튼</button>
+    <input type="button" onclick="myAlert()" value="누르지 마시오">
+    <button onclick="showMyName()">더블클릭</button>
+</body>
+
+</html>
