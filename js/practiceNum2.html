@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .items {
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            text-align: center;
+        }
+
+        #printField {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #butonField {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="items">
+        <span id="printField" align="center"> </span>
+
+        <div class="buttonField" align="center">
+            <button id="red" onclick="turnRed()">빨강</button>
+            <button id="blue" onclick="turnBlue()">파랑</button>
+            <button id="green" onclick="turnGreen()">초록</button>
+        </div>
+    </div>
+
+    <script>
+        let input = prompt('텍스트를 입력해주세요');
+
+        if (input == null || input == '') {
+            alert('텍스트를 입력해주세요');
+        } else {
+            document.getElementById('printField').innerText = input;
+        }
+
+        function turnRed() {
+            alert('빨간색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'red';
+        }
+
+        function turnBlue() {
+            alert('파란색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'blue';
+        }
+
+        function turnGreen() {
+            alert('초록색으로 변경됩니다');
+            document.getElementById('printField').style.color = 'green';
+        }
+
+    </script>
+</body>
+
+</html>
