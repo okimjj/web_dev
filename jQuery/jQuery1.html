@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            //
+            console.log('will run after onload');
+
+            $('#button1').click(function () {
+                console.log('클릭!');
+            })
+
+            document.getElementById('button2').addEventListener('click', function () {
+                console.log('클릭2!!')
+            })
+
+            $('#button3').on('click', function () {
+                console.log('클릭3!');
+            })
+            //event chain
+            $('#button4').click(function () {
+                console.log('클릭4!');
+            }).mouseover(function () {
+                console.log('마우스오버');
+            }).mouseout(function () {
+                console.log('마우스 떠났어!');
+            })
+
+            $('#button5').click(function () {
+                $('#text').append('hello').append(' world');
+            })
+
+        });
+    </script>
+    <div id="title">title</div>
+    <div class="bigText">big text</div>
+    <div class="bigText">big text 2</div>
+    <button id="button1">클릭</button>
+    <button id="button2">클릭</button>
+    <button id="button3">클릭</button>
+    <button id="button4">클릭</button>
+    <button id="button5">클릭</button>
+    <div id="text">안녕 </div>
+</body>
+
+</html>
