@@ -83,7 +83,7 @@
     <script>
         $(function () {
             $('#register').click(function () {
-                $('<div class = \'box\'></div>').html('<b>' + prompt('이름 입력') + '</b>').append(" ").append(prompt("내용 입력")).prependTo('#floor')
+                $('<div class = \'box\'></div>').html('<b>' + prompt('이름 입력') + '</b>').append(" ").append(prompt("내용 입력")).insertBefore('#floor')
             });
         });
     </script>
