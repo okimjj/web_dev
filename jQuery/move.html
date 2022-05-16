@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        #sky {
+            position: relative;
+            top: 250px;
+            left: 500px;
+            display: inline-block;
+            background-color: skyblue;
+            width: 1000px;
+            height: 500px;
+        }
+
+        #plane {
+            width: 300px;
+            position: relative;
+            left: 350px;
+            top: 150px;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $(document).keydown(function (e) {
+                switch (e.which) {
+                    case 37:
+                        $("#plane").finish().animate({
+                            left: "-=20"
+                        });
+                        break;
+                    case 38:
+                        $("#plane").finish().animate({
+                            top: "-=20"
+                        });
+                        break;
+                    case 39:
+                        $("#plane").finish().animate({
+                            left: "+=20"
+                        });
+                        break;
+                    case 40:
+                        $("#plane").finish().animate({
+                            top: "+=20"
+                        });
+                        break;
+                }
+            })
+        })
+    </script>
+
+    <div id="sky">
+        <div id="plane">
+            <img src="https://cdn.pixabay.com/photo/2012/04/10/17/24/airplane-26560_960_720.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
