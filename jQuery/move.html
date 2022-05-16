@@ -36,24 +36,24 @@
 <body>
     <script>
         $(function () {
-            $(document).keydown(function (e) {
-                switch (e.which) {
-                    case 65:
+            $(document).keydown(function (event) {
+                switch (event.key) {
+                    case "a":
                         $("#plane").finish().animate({
                             left: "-=20"
                         });
                         break;
-                    case 87:
+                    case "w":
                         $("#plane").finish().animate({
                             top: "-=20"
                         });
                         break;
-                    case 68:
+                    case "d":
                         $("#plane").finish().animate({
                             left: "+=20"
                         });
                         break;
-                    case 83:
+                    case "s":
                         $("#plane").finish().animate({
                             top: "+=20"
                         });
