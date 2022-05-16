@@ -10,6 +10,7 @@
     <style>
         td {
             border: 0.5px solid black;
+            border-collapse: collapse;
             text-align: center;
             padding: 5px 0;
         }
@@ -50,10 +51,10 @@
             });
 
             $("#logButton").click(function () {
-                $("input[name=oneCheck]:checked").each(function () {
-                    let content = $(this).next("label");
-                    console.log(content);
+                $(":checkbox[name=oneCheck]:checked").each(function () {
+                    console.log(this).next(label).text();
                 })
+
             })
 
 
