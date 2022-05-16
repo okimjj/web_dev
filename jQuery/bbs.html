@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        td {
+            border: 0.5px solid black;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .check,
+        .time {
+            width: 100px;
+        }
+
+        .title {
+            width: 200px;
+        }
+
+        #logButton {
+            position: relative;
+            top: 20px;
+            left: 295px;
+            display: inline-block;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            background-color: rgb(156, 156, 156);
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        $(function () {
+            $("#checkAll").click(function () {
+                if ($("#checkAll").is(":checked")) {
+                    $("input[name=oneCheck]").prop("checked", true);
+                } else {
+                    $("input[name=oneCheck]").prop("checked", false);
+                }
+            });
+
+            $("#logButton").click(function () {
+                $("input[name=oneCheck]:checked").each(function () {
+                    let content = $(this).next("label");
+                    console.log(content);
+                })
+            })
+
+
+        });
+    </script>
+
+    <table cellspacing="0">
+        <tr>
+            <td class="check"><input type="checkbox" id="checkAll"><label for="checkAll"> 확인</label></td>
+            <td class="title">제목</td>
+            <td class="time">글쓴시간</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb1"></td>
+            <td class="title"><label for="cb1">111111</label></td>
+            <td class="time">11:11:00</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb2"></td>
+            <td class="title"><label for="cb2">222222</label></td>
+            <td class="time">11:11:00</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb3"></td>
+            <td class="title"><label for="cb3">분당</label> </td>
+            <td class="time">11:11:00</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb4"></td>
+            <td class="title"><label for="cb4">지금이니!</label></td>
+            <td class="time">11:11:00</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb5"></td>
+            <td class="title"><label for="cb5">DIMA</label></td>
+            <td class="time">11:11:00</td>
+        </tr>
+        <tr>
+            <td class="check"><input type="checkbox" name="oneCheck" id="cb6"></td>
+            <td class="title"><label for="cb6">오히려 좋아</label></td>
+            <td class="time">11:11:00</td>
+        </tr>
+    </table>
+    <div id="logButton">로그</div>
+</body>
+
+</html>
