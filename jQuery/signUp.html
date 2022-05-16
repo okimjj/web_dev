@@ -33,7 +33,7 @@
                 let profCheck = $("#jobChoice option:checked").val();
                 let genderChecked = $("input[type=radio]:checked").length;
                 let hobbyChecked = $("input[type=checkbox]:checked").length;
-                let pwlength = $("#password").length;
+                let pwlength = $("#password").val().length;
 
                 if (profCheck == "none") {
                     alert("직업을 선택해주세요");
