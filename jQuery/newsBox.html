@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: #dfe3ee;
+            margin: 0;
+            height: 100%;
+        }
+
+        #topBar {
+            /* position: absolute; */
+            left: 0;
+            top: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+            background-color: #4267B2;
+        }
+
+        #headline {
+            position: relative;
+            top: 30%;
+            left: 30px;
+            color: white;
+            font-weight: 500;
+            font-size: x-large
+        }
+
+        #contents {
+            position: relative;
+            width: 500px;
+            top: 30px;
+            padding: 10px;
+            left: 30px;
+            right: 30px;
+            background-color: rgb(221, 221, 221);
+        }
+
+        .box {
+            position: relative;
+            background-color: white;
+            width: 200px;
+            margin-top: 8px;
+            padding: 3px;
+            left: 1%;
+            font-size: large;
+
+        }
+
+        #register {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            top: 50px;
+            padding-top: 5px;
+            left: 30px;
+            width: 100px;
+            height: 30px;
+            font-weight: bold;
+            color: black;
+            background-color: rgb(221, 221, 221);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            $('#register').click(function () {
+                $('<div class = \'box\'></div>').html('<b>' + prompt('이름 입력') + '</b>').append(" ").append(prompt("내용 입력")).insertBefore('#floor')
+            });
+        });
+    </script>
+
+    <div id="topBar">
+        <div id="headline">기사등록하기</div>
+    </div>
+
+    <div id="contents">
+        <div class="box" id="park"><b>박지성</b> SBS에서 월드컵 보세요!</div>
+        <div class="box" id="ahn"><b>안정환</b> MBC죠...</div>
+        <div class="box" id="lee"><b>이영표</b> KBS는 수신료의 가치를..</div>
+        <div id="floor"></div>
+    </div>
+    <div id="register">등록하기</div>
+
+
+
+
+
+</body>
+
+</html>
