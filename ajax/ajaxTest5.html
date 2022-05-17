@@ -43,7 +43,9 @@
                 .then(jsonArray => {
                     let movies = $("#movies");
                     jsonArray.results.forEach((data, index) => {
-                        movies.append(`<div class="movieBox" onclick="goToOverview(${data.id})"> <img  class="poster" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="poster"> <div class="title">${data.title}</div> </div>`)
+                        movies.append(`<div class="movieBox" onclick="goToOverview(${data.id})"> 
+                            <img  class="poster" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="poster"> 
+                            <div class="title">${data.title}</div> </div>`)
                     });
                 });
         }
