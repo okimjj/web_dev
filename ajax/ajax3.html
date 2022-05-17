@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //y = f(x)              == 수학식 표현
+        //function f(x){내용}   == JS식 표현
+        //x => 내용             == JS 화살표 표기법, 람다lambda 표기법
+        function loadDoc() {
+            fetch("people.json")
+                .then(response => response.json()) //then = Promise<response> "리스폰스가 올 건데 그건 json으로 받으셈"
+                // == .then(function (response) {
+                //     return response.json();
+                //     })
+                .then(json => { //그리고선 받은 json 리스폰스를 갖고 아래를 실행해라.
+                    document.getElementById("demo").innerHTML = JSON.stringify(json);
+                    console.log(json);
+
+                    let sentence = `${json.name}의 기술: ${json.skill}`;
+                    document.getElementById("result").textContent = sentence;
+                });
+        }
+    </script>
+    <div id="demo"></div>
+    <div id="name"></div>
+    <div id="result"></div>
+    <button onclick="loadDoc()">get data</button>
+</body>
+
+</html>
