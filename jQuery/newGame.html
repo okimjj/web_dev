@@ -33,7 +33,7 @@
             width: 100px;
             height: 100px;
             bottom: 25px;
-            left: 20px;
+            left: 300px;
         }
 
         #mariodead {
@@ -98,7 +98,7 @@
     <div id="container">
         <div id="background"></div>
         <img id="centerOver" src="https://pngimg.com/uploads/game_over/game_over_PNG57.png" alt="gameOverScreenCenter">
-        <img id="mario" src="http://assets.stickpng.com/images/584df3ad6a5ae41a83ddee08.png" alt="mario">
+        <img id="mario" src="https://supermariorun.com/assets/img/stage/obj_mode1.png" alt="mario">
         <img id="missile"
             src="http://media-s3-us-east-1.ceros.com/miis-edu/images/2019/07/12/be602dd61eebd71635c0a58d8441cf2b/brahmos-cut-out-3.png"
             alt="missile">
@@ -165,10 +165,12 @@
             }
         }
 
-        function missileFire() {
-            let endLocation = parseInt($('#killer').css('left').replace("px", ""));
-            $("#missile").show().animate({ left: endLocation });
-        }
+        // function missileFire() {
+        //     let endLocation = parseInt($('#killer').css('left').replace("px", ""));
+        //     $("#missile").show().animate({ left: endLocation }, 3000, function () {
+        //         $("#missile").hide();
+        //     });
+        // }
 
         function gameOver() {
             isGameOver = true;
