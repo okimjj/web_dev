@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
     <title>Document</title>
 </head>
@@ -18,7 +19,6 @@
                 {{post.title}}
             </li>
         </ul>
-
     </div>
 
     <script>
@@ -32,6 +32,8 @@
             created: function () {
                 //통신
                 this.getPosts();
+                //디바운스 적용된 검색 함수 정의
+                this.debouncedSearch = _.debounce(this.search, 500);
             },
             methods: {
                 getPosts: function () {
@@ -40,13 +42,16 @@
                         .then(response => response.json())
                         .then(function (json) {
                             v.posts = json;
+                            v.filteredPosts = json;
                         })
+                },
+                search: function (val) {
+                    this.filteredPosts = this.posts.filter(post => post.title.includes(val));
                 }
             },
             watch: {
                 query: function (val) {
-                    this.filteredPosts = this.posts.filter(post => post.title.includes(val))
-                    console.log(val);
+                    this.debouncedSearch(val);
                 }
             }
         }) 
